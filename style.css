@@ -239,6 +239,7 @@ main .block-qrCode img {
     -webkit-animation: scroll 10s infinite linear;
     -moz-animation: scroll 10s infinite linear;
     animation: scroll 10s infinite linear;
+
 }
 
 .work-experience {
