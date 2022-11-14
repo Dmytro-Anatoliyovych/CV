@@ -90,49 +90,48 @@ main {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
 }
 
 main .name-qrCode-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
-main .name {
-    padding: 20px 0px;
+main .block-name {
+    text-transform: uppercase;
+    font-size: 20px;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
     justify-items: center;
-    align-items: center;
-
-    text-transform: uppercase;
-    font-size: 20px;
+    row-gap: 10px;
 }
 
-main .name h1 {
+main .block-name h1 {
     font-size: 35px;
     color: white;
 }
 
-main .name p {
+main .block-name p {
     font-size: 15px;
     color: #CC6699;
 }
 
-main .qrCode {
+main .block-qrCode {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .qrCode img {
+main .block-qrCode img {
     width: 100px;
-}
 
-.qrCode-color-border {
     --border-size: 3px;
     --border-angle: 0turn;
     background-image: conic-gradient(from var(--border-angle),
@@ -153,7 +152,7 @@ main .qrCode img {
     }
 }
 
-.box:hover {
+.qrCode-color-border:hover {
     animation-play-state: paused;
 }
 
@@ -168,32 +167,63 @@ main .qrCode img {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
     align-items: center;
 }
 
-.headings {
-    font-size: 30px;
+.title {
     color: #CC6699;
 }
 
-.headings span {
+.title span {
     color: #85FDF7;
 }
 
 .aboutMe-wrapper p {
     color: white;
+    text-align: justify;
 }
 
-.skills-icons-wrapper {
+.phoneNumber-email-wrapper {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
 }
 
-.skills-icons-wrapper img {
+.phoneNumber-email-wrapper span {
+    color: #85FDF7;
+}
+
+.work-experience {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    align-items: center;
+}
+
+.work-experience p {
+    color: white;
+    text-align: justify;
+}
+
+.skill-wrapper {
+    padding-left: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    align-items: center;
+}
+
+.skill-wrapper img {
     width: 50px;
-    height: 50px;
+}
+
+.skills-image-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
