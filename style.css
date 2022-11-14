@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Gaefontly";
+    src: url(fonts/Gaefontly/Gaefontly.otf)
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Gaefontly";
+    letter-spacing: 2px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    background-color: #211E2F;
+}
+
+.cv-wrapper {
+    width: 768px;
+    height: 1024px;
+    padding: 10px;
+    background-color: #2C293D;
+
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-template-rows: 1fr;
+
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.section-number {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(50, 1fr);
+    justify-items: center;
+
+    color: #918F98;
+}
+
+.section-markup {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+header,
+footer {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+.cv-tag {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.cv-tag .parentheses {
+    color: #85FDF7;
+}
+
+.cv-tag .div-tag {
+    color: #CC6699;
+}
+
+.cv-tag .selector-class {
+    color: greenyellow;
+}
+
+.cv-tag .selector-class-name {
+    color: #EAE795;
+}
+
+
+main {
+    border-left: 1px solid grey;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+}
+
+main .name-qrCode-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+main .name {
+    padding: 20px 0px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+main .name h1 {
+    font-size: 35px;
+    color: white;
+}
+
+main .name p {
+    font-size: 15px;
+    color: #CC6699;
+}
+
+main .qrCode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .qrCode img {
+    width: 100px;
+}
+
+.qrCode-color-border {
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background-image: conic-gradient(from var(--border-angle),
+            #2C293D,
+            #2C293D 50%,
+            #2C293D),
+        conic-gradient(from var(--border-angle), transparent 20%, #08f, #CC6699);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+        cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.aboutMe-wrapper {
+    padding-left: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+}
+
+.headings {
+    font-size: 30px;
+    color: #CC6699;
+}
+
+.headings span {
+    color: #85FDF7;
+}
+
+.aboutMe-wrapper p {
+    color: white;
+}
+
+.skills-icons-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.skills-icons-wrapper img {
+    width: 50px;
+    height: 50px;
+}
